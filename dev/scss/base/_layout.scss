@@ -2,6 +2,11 @@
   GENERAL LAYOUT
 ============================================================================*/
 
+/*  common to all page
+==============================================================================*/
+
+
+
 /*  header
 ==============================================================================*/
 
@@ -27,14 +32,14 @@ header {
     }
   }
   /* border bottom */
-  &::after {
-    content: '';
-    font: 0/0 a;
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    border-bottom: $fine-border;
-  }
+  // &::after {
+  //   content: '';
+  //   font: 0/0 a;
+  //   display: block;
+  //   margin: 0 auto;
+  //   width: 80%;
+  //   border-bottom: $fine-border;
+  // }
 }
 
 .af-disclaimer {
@@ -59,20 +64,34 @@ main {
 .af-social {
   padding: 3rem 1rem;
 
+  @include mq ($small) {
+    padding: 3rem 4rem;
+    background-color: red;
+  }
+
   @include mq ($med) {
-    padding: 3rem 2rem;
+    padding: 3rem 4rem;
+    background-color: blue;
+  }
+
+  @include mq ($large) {
+    padding: 3rem 4rem;
     background-color: gold;
+  }
+  @include mq ($xl) {
+    padding: 3rem 4rem;
+    background-color: lime;
   }
 
   [class$="title"] {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 
     /* border bottom */
     &::after {
       content: '';
       font: 0/0 a;
       display: block;
-      margin: 0 auto;
+      margin: 2rem auto 0;
       width: 80%;
       border-bottom: $fine-border;
     }
@@ -99,6 +118,8 @@ main {
   display: block;
   width: auto;
   text-align: center;
+  margin-top: 2rem;
+
   [class^="af-social__item"] {
     display: inline-block;
     margin-bottom: 1.4rem;

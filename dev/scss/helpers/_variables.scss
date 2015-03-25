@@ -29,8 +29,10 @@ $fine-border: 1px solid;
 ==============================================================================*/
 
 @mixin mq ($size){
-  @content;
-}
+  @media screen and (min-width : $size) {
+    @content;
+  }  
+} 
 
 
 /*  FONTS STACK
