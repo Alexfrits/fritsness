@@ -1,0 +1,31 @@
+
+/*===================================================================
+  CHARACTER STYLE
+===================================================================*/
+
+
+/* strongify
+==============================================================================*/
+
+/*
+ *  to be applied on an inline content
+ */
+
+.af-strong {
+  font-style: italic;
+  font-weight: bold;
+  color: $second-color;
+}
+
+.af-disclaimer {
+  color: $alert-color;
+  font-size: 1.4rem;
+  font-style: italic;
+
+  &::before {
+    content: "(";
+  }
+  &::after {
+    content: ")";
+  }
+}

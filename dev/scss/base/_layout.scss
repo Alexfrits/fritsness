@@ -15,6 +15,10 @@ header {
   position: relative;
   padding: 2rem 0;
 
+  @include mq($large) {
+    padding: 3rem 4rem;
+  }
+
   h1 {
     display: block;
     height: auto;
@@ -30,31 +34,59 @@ header {
       display: block;
       text-align: center;
     }
+
+    @include mq($large) {
+      width: 25%;
+      margin: 0;
+      text-align: left;
+
+      img {
+        display: inline-block;
+        width: 40%;
+      }
+
+      strong {
+        display: inline-block;
+        width: calc(50% - 2rem);
+        margin-left: 2rem;
+      }
+
+      .af-name__first,
+      .af-name__last {
+        display: block;
+        text-align: left;
+      }
+    }
   }
-  /* border bottom */
-  // &::after {
-  //   content: '';
-  //   font: 0/0 a;
-  //   display: block;
-  //   margin: 0 auto;
-  //   width: 80%;
-  //   border-bottom: $fine-border;
-  // }
+
+// position du disclaimer du header, pas commun à tous les disclaimers
+  .af-disclaimer {
+    display: block;
+    position: absolute; // par rapport à header
+    top: 10%;
+    left: 2rem;
+    margin: 0 auto;
+
+    @include mq($large) {
+      top: auto;
+      left: auto;
+      bottom: 3rem;
+      right: 4rem;
+    }
+  }
 }
 
-.af-disclaimer {
-  display: block;
-  position: absolute; // par rapport à header
-  top: 10%;
-  left: 2rem;
-  margin: 0 auto;
-}
 
 /*  main
 ==============================================================================*/
 
 main {
-
+  @include mq($xl) {
+    width: 66%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 /* GENERAL */
@@ -65,23 +97,21 @@ main {
   padding: 3rem 1rem;
 
   @include mq ($small) {
-    padding: 3rem 4rem;
-    background-color: red;
+    width: 80%;
+    margin: 0 auto;
   }
 
   @include mq ($med) {
     padding: 3rem 4rem;
-    background-color: blue;
+
+    [class$="text"]{
+      margin: 0 2rem;
+    }
   }
 
-  @include mq ($large) {
-    padding: 3rem 4rem;
-    background-color: gold;
-  }
-  @include mq ($xl) {
-    padding: 3rem 4rem;
-    background-color: lime;
-  }
+  // @include mq ($xl) {
+
+  // }
 
   [class$="title"] {
     margin-bottom: 3rem;
@@ -94,6 +124,10 @@ main {
       margin: 2rem auto 0;
       width: 80%;
       border-bottom: $fine-border;
+
+      @include mq($large) {
+        width: 100%;
+      }
     }
   }
 
@@ -103,15 +137,21 @@ main {
 /* each block */
 
 .af-about {
-
+  @include mq ($large) {
+    display: table-cell;
+    width: 49%;
+  }
 }
 
 .af-resume {
-
+  @extend .af-about;
 }
 
 .af-social {
-
+  @include mq($xl) {
+    display: inline-block;
+    width: 30%;
+  }
 }
 
 .af-social__list {
@@ -122,10 +162,28 @@ main {
 
   [class^="af-social__item"] {
     display: inline-block;
+    width: auto;
     margin-bottom: 1.4rem;
 
     & + li {
       margin-left: 1.4rem;
+    }
+  }
+
+  @include mq($xl) {
+
+    [class^="af-social__item"] {
+      display: block;
+      margin: 0 0 2rem;
+      a {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      & + li {
+        margin-left: 0;
+      }
     }
   }
 }

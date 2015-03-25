@@ -1,20 +1,56 @@
 /*  LABEL
 ==============================================================================*/
 
-
-
 /*
 **
 **  Apply the label class on inline element
 **
 */
 
-
-
 .af-label {
   padding: .1rem .5rem;
   border-bottom: 0;
-  background: $second-color;
+
+  background:
+    linear-gradient(
+      to bottom right,
+      $alert-color,
+      $alert-color 50%,
+      transparent 50%,
+      transparent
+    ) no-repeat 0 0,
+    linear-gradient(
+      to bottom right,
+      $second-color,
+      $second-color
+    ) no-repeat 0 0;
+  background-size: 0%, 100%;
   color: #fff;
+
   font-style: italic;
+
+  transition: background-size .5s;
+
+  @include mq($xl) {
+    background:
+    linear-gradient(
+      to bottom right,
+      $third-color,
+      $third-color 50%,
+      transparent 50%,
+      transparent
+    ) no-repeat 0 0,
+    linear-gradient(
+      to bottom right,
+      $main-color,
+      $main-color
+    ) no-repeat 0 0;
+      background-size: 0%, 100%;
+
+  }
+
+  &:hover,
+  &:active {
+    background-size: 200%, 100%;
+  }
 }

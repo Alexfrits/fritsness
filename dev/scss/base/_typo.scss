@@ -7,30 +7,17 @@ body {
   font-size: 1.8rem;
 }
 
-abbr[title] {
-  font-style: italic;
-}
-
 /*  header
 ==============================================================================*/
 
 header {
 
-
   h1 {
-    font-size: 4rem;
+    font-size: 3.4rem;
     .af-name {
       font-family: $komika;
     }
-
-    img {
-
-    }
   }
-}
-
-.af-disclaimer {
-  font-size: 1rem;
 }
 
 /*  main
@@ -48,11 +35,16 @@ main {
 
 
   [class$="title"] {
-    font-family: $komika;
-    font-size: 3.2rem;
+    font-family: $main-font;
+    font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  [class$="text"] {
+    line-height: 2.2em;
   }
 
 }
