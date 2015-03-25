@@ -1,0 +1,85 @@
+/*============================================================================
+  FONTS, TYPO AND PARAGRAPHS
+============================================================================*/
+
+body {
+  font-family: $main-font;
+  font-size: 1.8rem;
+}
+
+/*  header
+==============================================================================*/
+
+header {
+
+
+  h1 {
+    font-size: 4rem;
+    .af-name {
+      font-family: $komika;
+    }
+
+    img {
+
+    }
+  }
+}
+
+.af-disclaimer {
+  font-size: 1rem;
+}
+
+/*  main
+==============================================================================*/
+
+main {
+
+}
+
+/* GENERAL */
+
+.af-about,
+.af-resume,
+.af-social {
+
+
+  [class$="title"] {
+    font-family: $komika;
+    font-size: 3.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+}
+
+/* each block */
+
+.af-about {
+
+}
+
+.af-resume {
+
+}
+
+.af-social {
+
+}
+
+.af-social__list {
+
+  [class^="af-social__item"] {
+
+  }
+}
+
+/*  footer
+==============================================================================*/
+
+footer {
+  .af-copyright {
+    text-align: center;
+
+  }
+}

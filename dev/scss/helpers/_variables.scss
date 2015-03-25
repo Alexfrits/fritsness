@@ -1,0 +1,49 @@
+/*===================================================================
+  VARIABLES, MIXINS AND OTHER HELPERS
+===================================================================*/
+
+
+/*  COLORS
+==============================================================================*/
+
+$main-color: #00eb88; // bright green
+$second-color: #7070ff; // purple-blue
+$third-color: #40268e; // dark violet
+$alert-color: #e42b3d; // red
+
+/*  SIZES
+==============================================================================*/
+
+/* Screen sizes */
+$small: 34em;
+$med: 50em;
+$large: 65em;
+$xl: 80em;
+
+/* Borders */
+
+$fine-border: 1px solid;
+
+
+/*  MEDIA QUERIES
+==============================================================================*/
+
+@mixin mq ($size){
+  @content;
+}
+
+
+/*  FONTS STACK
+==============================================================================*/
+
+$komika : 'komika_titleregular', 'Helvetica Neue italic', 'Arial italic', sans-serif;
+$main-font : 'Roboto Condensed', 'Helvetica Neue condensed', 'Arial narrow', sans-serif;
+
+/*
+** Roboto Font weights
+**
+**  300 Light (Italic)
+**  400 Normal (Italic)
+**  700 Bold (Italic)
+**
+*/

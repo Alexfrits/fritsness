@@ -1,0 +1,119 @@
+/*============================================================================
+  GENERAL LAYOUT
+============================================================================*/
+
+/*  header
+==============================================================================*/
+
+header {
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
+
+  h1 {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: 25%;
+      margin: 0 auto;
+    }
+    .af-name__first,
+    .af-name__last {
+      display: block;
+      text-align: center;
+    }
+  }
+  /* border bottom */
+  &::after {
+    content: '';
+    font: 0/0 a;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-bottom: $fine-border;
+  }
+}
+
+.af-disclaimer {
+  display: block;
+  position: absolute; // par rapport à header
+  top: 10%;
+  left: 2rem;
+  margin: 0 auto;
+}
+
+/*  main
+==============================================================================*/
+
+main {
+
+}
+
+/* GENERAL */
+
+.af-about,
+.af-resume,
+.af-social {
+  padding: 3rem 1rem;
+
+  @include mq ($med) {
+    padding: 3rem 2rem;
+    background-color: gold;
+  }
+
+  [class$="title"] {
+    margin-bottom: 1rem;
+
+    /* border bottom */
+    &::after {
+      content: '';
+      font: 0/0 a;
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      border-bottom: $fine-border;
+    }
+  }
+
+
+}
+
+/* each block */
+
+.af-about {
+
+}
+
+.af-resume {
+
+}
+
+.af-social {
+
+}
+
+.af-social__list {
+  display: block;
+  width: auto;
+  text-align: center;
+  [class^="af-social__item"] {
+    display: inline-block;
+    margin-bottom: 1.4rem;
+
+    & + li {
+      margin-left: 1.4rem;
+    }
+  }
+}
+
+/*  footer
+==============================================================================*/
+
+footer {
+  .af-copyright {
+
+  }
+}

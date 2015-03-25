@@ -1,0 +1,94 @@
+/*============================================================================
+  COLORS, DECORATIVE IMAGES ETC
+============================================================================*/
+
+body {
+  color: $third-color;
+}
+
+/*  header
+==============================================================================*/
+
+header {
+
+  h1 {
+    .af-name__first {
+      color: $second-color;
+    }
+    .af-name__last {
+      color: $main-color;
+    }
+
+    img {
+
+    }
+  }
+}
+
+.af-disclaimer {
+  color: $alert-color;
+}
+
+/*  main
+==============================================================================*/
+
+main {
+
+}
+
+/* GENERAL */
+
+.af-about,
+.af-resume,
+.af-social {
+
+
+  [class$="title"] {
+    /* border bottom */
+    &::after {
+      border-bottom-color: $third-color;
+    }
+  }
+
+}
+
+/* each block */
+
+.af-about {
+  [class$="title"] {
+    color: $main-color;
+  }
+}
+
+.af-resume {
+  [class$="title"] {
+    color: $alert-color;
+  }
+}
+
+.af-social {
+  [class$="title"] {
+    color: $second-color;
+  }
+}
+
+.af-social__list {
+
+  [class^="af-social__item"] {
+    background-color: $second-color;
+
+    a {
+      color: #fff;
+      padding: 1rem;
+    }
+  }
+}
+
+/*  footer
+==============================================================================*/
+
+footer {
+  .af-copyright {
+
+  }
+}
