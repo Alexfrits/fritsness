@@ -1,5 +1,5 @@
 # **Fritsness**
-_My personal website developpment files_
+> My personal website development files_
 
 ----------
 
