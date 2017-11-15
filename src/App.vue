@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <header>
-      <h1>
-        <span>Alexandre</span>
-        <span>Frits</span>
+    <header class="af-header">
+      <h1 class="af-title">
+        <img class="af-logo" src="/static/img/af-monogram.min.svg" alt="Alexandre Frits monogram" width="240" height="240">
+        <span class="af-title__firstname">Alexandre</span>
+        <span class="af-title__lastname">Frits</span>
       </h1>
       <div>
         <h2>UI/UX Designer</h2>
@@ -16,10 +17,10 @@
       </div>
       <a href="http://be.linkedin.com/in/alexandrefrits">/in/alexandrefrits</a>
     </header>
-    <ol class="timeline">
-      <li class="timeline__item">naissance</li>
-      <li class="timeline__item">études</li>
-      <li class="timeline__item">
+    <ol class="af-timeline">
+      <li class="af-timeline__item">naissance</li>
+      <li class="af-timeline__item">études</li>
+      <li class="af-timeline__item">
         formation Frontend Cepegra Gosselies
         <ol>
           <li>stage HTML - CSS</li>
@@ -27,8 +28,8 @@
           <li>Stage Frontend Tapptic Liège</li>
         </ol>
       </li>
-      <li class="timeline__item">Freelance Webdesigner</li>
-      <li class="timeline__item">Group S</li>
+      <li class="af-timeline__item">Freelance Webdesigner</li>
+      <li class="af-timeline__item">Group S</li>
     </ol>
     <main>
       <section>
@@ -89,6 +90,8 @@
     </aside>
   </div>
 </template>
+
+<style src="./styles/main.scss" lang="scss"></style>
 
 <script>
 
